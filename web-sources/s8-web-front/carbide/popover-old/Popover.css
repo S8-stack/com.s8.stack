@@ -1,0 +1,598 @@
+@charset "UTF-8";
+/* The DEFINITIVE popover styling sheet !! */
+
+/* -> larger than all hint.css possibility */
+
+/* fallback state for idle popover*/
+
+.popover-hidden {
+	visibility: hidden;
+}
+
+.popover-visible {
+	visibility: visible;
+}
+
+/* <factored-pop-over> */
+
+[class^="popover"] {
+	position: relative;
+	z-index: 128;
+	/*padding: 5px 8px;*/
+	font: normal normal 11px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: break-word;
+	/*white-space: pre; -> big bug in chrome */
+	white-space: normal;
+	pointer-events: none;
+	/* border -standardized across all types */
+	border-style: solid;
+	border-width: 1px;
+	/* default color */
+	border-radius: 4px;
+	color: #24292e;
+	background-color: #ffffff;
+	border-color: #d1d5da;
+	/*box-shadow: 0 1px 15px rgba(27, 31, 35, 0.32);*/
+	/* display: inline-block;*/
+	display: block;
+	text-decoration: none;
+}
+
+[class^="popover"]::before, [class^="popover"]::after {
+	position: absolute;
+	display: inline-block;
+	/* z-index: 15;
+	width: 0;
+	height: 0; */
+	pointer-events: none;
+	content: " ";
+	border: solid transparent;
+}
+
+[class^="popover"]::before {
+	border-width: 8px;
+}
+
+[class^="popover"]::after {
+	border-width: 7px;
+}
+
+[class^="popover"]>div {
+	position: relative;
+	display: block;
+}
+
+@keyframes popover-appear {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
+}
+
+.popover-vertical-wrapper {
+	position: absolute;
+	z-index: 128;
+	opacity: 0;
+	filter: drop-shadow(0px 1px 8px rgba(27, 31, 35, 0.64));
+	/* animation */
+	animation-name: popover-appear;
+	animation-duration: .1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+	animation-delay: .4s;
+}
+
+/* </factored-pop-over> */
+
+/* <popover-none> */
+
+.popover-none {
+	margin: 0 0 0 0;
+}
+
+.popover-none::before {
+	border: none;
+}
+
+.popover-none::after {
+	border: none;
+}
+
+/* </popover-none> */
+
+/* <popover-top> */
+
+[class^="popover-top"] {
+	margin: 0 0 8px 0;
+}
+
+[class^="popover-top"]::before {
+	top: 100%;
+	margin-left: -1px;
+	border-top-color: #d1d5da;
+}
+
+[class^="popover-top"]::after {
+	top: 100%;
+	border-top-color: #ffffff;
+}
+
+/* .popover-top-center {} */
+
+.popover-top-center::before, .popover-top-center::after {
+	left: calc(50% - 7px);
+}
+
+/* .popover-top-left {} */
+
+.popover-top-left::before, .popover-top-left::after {
+	left: 8px;
+}
+
+/*.popover-top-right {} */
+
+.popover-top-right::before {
+	margin-right: -1px;
+	right: 8px;
+}
+
+.popover-top-right::after {
+	right: 8px;
+}
+
+/*.popover-top-none {} */
+
+.popover-top-none::before, .popover-top-none::after {
+	border: none;
+}
+
+/* </popover-top> */
+
+/* <popover-right> */
+
+[class^="popover-right"] {
+	margin: 0 0 0 8px;
+}
+
+[class^="popover-right"]::before {
+	right: 100%;
+	margin-top: -1px;
+	border-right-color: #d1d5da;
+}
+
+[class^="popover-right"]::after {
+	right: 100%;
+	border-right-color: #ffffff;
+}
+
+/* .popover-right-center {} */
+
+.popover-right-center::before, .popover-right-center::after {
+	top: calc(50% - 7px);
+}
+
+/* .popover-right-top {} */
+
+.popover-right-top::before, .popover-right-top::after {
+	top: 8px;
+}
+
+/* .popover-right-bottom {} */
+
+.popover-right-bottom::before {
+	bottom: 8px;
+	margin-bottom: -1px;
+}
+
+.popover-right-bottom::after {
+	bottom: 8px;
+}
+
+/* .popover-right-none {} */
+
+.popover-right-none::before, .popover-right-none::after {
+	border: none;
+}
+
+/* </popover-right> */
+
+/* <popover-bottom> */
+
+[class^="popover-bottom"] {
+	margin: 8px 0 0 0;
+}
+
+[class^="popover-bottom"]::before {
+	bottom: 100%;
+	margin-left: -1px;
+	border-bottom-color: #d1d5da;
+}
+
+[class^="popover-bottom"]::after {
+	bottom: 100%;
+	border-bottom-color: #ffffff;
+}
+
+/* .popover-bottom-center {} */
+
+.popover-bottom-center::before, .popover-bottom-center::after {
+	left: calc(50% - 7px);
+}
+
+/* .popover-bottom-left {} */
+
+.popover-bottom-left::before, .popover-bottom-left::after {
+	left: 8px;
+}
+
+/* .popover-bottom-right {} */
+
+.popover-bottom-right::before {
+	right: 8px;
+	margin-left: 0px;
+	margin-right: -1px;
+}
+
+.popover-bottom-right::after {
+	right: 8px;
+}
+
+/* .popover-bottom-none {} */
+
+.popover-bottom-none::before, .popover-bottom-none::after {
+	border: none;
+}
+
+/* </popover-bottom> */
+
+/* <popover-left> */
+
+[class^="popover-left"] {
+	margin: 0 8px 0 0;
+}
+
+[class^="popover-left"]::before {
+	left: 100%;
+	margin-top: -1px;
+	border-left-color: #d1d5da;
+}
+
+[class^="popover-left"]::after {
+	left: 100%;
+	border-left-color: #ffffff;
+}
+
+/* .popover-left-center {} */
+
+.popover-left-center::before, .popover-left-center::after {
+	top: calc(50% - 7px);
+}
+
+/* .popover-left-top {} */
+
+.popover-left-top::before, .popover-left-top::after {
+	top: 8px;
+}
+
+/* .popover-left-bottom {} */
+
+.popover-left-bottom::before {
+	bottom: 8px;
+	margin-bottom: -1px;
+}
+
+.popover-left-bottom::after {
+	bottom: 8px;
+}
+
+/* .popover-left-none {} */
+
+.popover-left-none::before, .popover-left-none::after {
+	border: none;
+}
+
+/* </popover-left> */
+
+/* <header> */
+
+.popover-head-top, .popover-body-top {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.popover-head-top {
+	z-index: 130;
+}
+
+.popover-body-top {
+	border-bottom: none;
+}
+
+.popover-head-right, .popover-body-right {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.popover-head-right {
+	z-index: 130;
+}
+
+.popover-body-right {
+	border-right: none;
+}
+
+.popover-head-bottom, .popover-body-bottom {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.popover-head-bottom {
+	z-index: 130;
+}
+
+.popover-body-bottom {
+	border-top: none;
+}
+
+.popover-head-left, .popover-body-left {
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.popover-head-left {
+	z-index: 130;
+}
+
+.popover-body-left {
+	border-left: none;
+}
+
+/* </header> */
+
+/* <default-style> */
+
+.popover-default {
+	color: #24292e;
+	background-color: #ffffff;
+	border-color: #d1d5da;
+	/*box-shadow: 0 1px 6px rgba(27, 31, 35, 0.4);*/
+}
+
+[class^="popover-top"].popover-default::before {
+	border-top-color: #d1d5da;
+}
+
+[class^="popover-top"].popover-default::after {
+	border-top-color: #ffffff;
+}
+
+[class^="popover-right"].popover-default::before {
+	border-right-color: #d1d5da;
+}
+
+[class^="popover-right"].popover-default::after {
+	border-right-color: #ffffff;
+}
+
+[class^="popover-bottom"].popover-default::before {
+	border-bottom-color: #d1d5da;
+}
+
+[class^="popover-bottom"].popover-default::after {
+	border-bottom-color: #ffffff;
+}
+
+[class^="popover-left"].popover-default::before {
+	border-left-color: #d1d5da;
+}
+
+[class^="popover-left"].popover-default::after {
+	border-left-color: #ffffff;
+}
+
+/* </default-style> */
+
+/* <toolbox-style> */
+
+.popover-toolbox {
+	color: #f4fff5;
+	background-color: #070b3b;
+}
+
+[class^="popover-top"].popover-toolbox::after {
+	border-top-color: #070b3b;
+}
+
+[class^="popover-right"].popover-toolbox::after {
+	border-right-color: #070b3b;
+}
+
+[class^="popover-bottom"].popover-toolbox::after {
+	border-bottom-color: #070b3b;
+}
+
+[class^="popover-left"].popover-toolbox::after {
+	border-left-color: #070b3b;
+}
+
+/* </toolbox-style> */
+
+/* <info-style> */
+
+.popover-info {
+	color: #24292e;
+	background-color: #dbedff;
+	border-color: #ccddf0;
+	/*box-shadow: 0 1px 6px rgba(27, 31, 35, 0.4);*/
+}
+
+[class^="popover-top"].popover-info::before {
+	border-top-color: #ccddf0;
+}
+
+[class^="popover-top"].popover-info::after {
+	border-top-color: #dbedff;
+}
+
+[class^="popover-right"].popover-info::before {
+	border-right-color: #ccddf0;
+}
+
+[class^="popover-right"].popover-info::after {
+	border-right-color: #dbedff;
+}
+
+[class^="popover-bottom"].popover-info::before {
+	border-bottom-color: #ccddf0;
+}
+
+[class^="popover-bottom"].popover-info::after {
+	border-bottom-color: #dbedff;
+}
+
+[class^="popover-left"].popover-info::before {
+	border-left-color: #ccddf0;
+}
+
+[class^="popover-left"].popover-info::after {
+	border-left-color: #dbedff;
+}
+
+/* </info-style> */
+
+/* <success-style> */
+
+.popover-success {
+	color: #165c26;
+	background-color: #dcffe4;
+	border-color: rgba(27, 31, 35, 0.15);
+}
+
+[class^="popover-top"].popover-success::before {
+	border-top-color: rgba(27, 31, 35, 0.15);
+}
+
+[class^="popover-top"].popover-success::after {
+	border-top-color: #dcffe4;
+}
+
+[class^="popover-right"].popover-success::before {
+	border-right-color: rgba(27, 31, 35, 0.15);
+}
+
+[class^="popover-right"].popover-success::after {
+	border-right-color: #dcffe4;
+}
+
+[class^="popover-bottom"].popover-success::before {
+	border-bottom-color: rgba(27, 31, 35, 0.15);
+}
+
+[class^="popover-bottom"].popover-success::after {
+	border-bottom-color: #dcffe4;
+}
+
+[class^="popover-left"].popover-success::before {
+	border-left-color: rgba(27, 31, 35, 0.15);
+}
+
+[class^="popover-left"].popover-success::after {
+	border-left-color: #dcffe4;
+}
+
+/* </success-style> */
+
+/* <warning-style> */
+
+.popover-warning {
+	color: #735c0f;
+	background-color: #fffbdd;
+	border-color: #d9d0a5;
+}
+
+[class^="popover-top"].popover-warning::before {
+	border-top-color: #d9d0a5;
+}
+
+[class^="popover-top"].popover-warning::after {
+	border-top-color: #fffbdd;
+}
+
+[class^="popover-right"].popover-warning::before {
+	border-right-color: #d9d0a5;
+}
+
+[class^="popover-right"].popover-warning::after {
+	border-right-color: #fffbdd;
+}
+
+[class^="popover-bottom"].popover-warning::before {
+	border-bottom-color: #d9d0a5;
+}
+
+[class^="popover-bottom"].popover-warning::after {
+	border-bottom-color: #fffbdd;
+}
+
+[class^="popover-left"].popover-warning::before {
+	border-left-color: #d9d0a5;
+}
+
+[class^="popover-left"].popover-warning::after {
+	border-left-color: #fffbdd;
+}
+
+/* </warning-style> */
+
+/* <error-style> */
+
+.popover-error {
+	color: #86181d;
+	background-color: #ffdce0;
+	border-color: #cea0a5;
+	/*box-shadow: 0 1px 6px rgba(27, 31, 35, 0.4);*/
+}
+
+[class^="popover-top"].popover-error::before {
+	border-top-color: #cea0a5;
+}
+
+[class^="popover-top"].popover-error::after {
+	border-top-color: #ffdce0;
+}
+
+[class^="popover-right"].popover-error::before {
+	border-right-color: #cea0a5;
+}
+
+[class^="popover-right"].popover-error::after {
+	border-right-color: #ffdce0;
+}
+
+[class^="popover-bottom"].popover-error::before {
+	border-bottom-color: #cea0a5;
+}
+
+[class^="popover-bottom"].popover-error::after {
+	border-bottom-color: #ffdce0;
+}
+
+[class^="popover-left"].popover-error::before {
+	border-left-color: #cea0a5;
+}
+
+[class^="popover-left"].popover-error::after {
+	border-left-color: #ffdce0;
+}
+
+/* </error-style> */

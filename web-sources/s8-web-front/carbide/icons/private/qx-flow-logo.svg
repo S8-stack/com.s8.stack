@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill="#27aa80">
+    <path id="base-arrow" d="M100,68 l12,-8 l0,4 l12,0 a 24,24 0 0,1 20.785,12 l20,34.641 l-6.928,4 l-20,-34.641 
+    a 16,16 0 0,0 -13.856,-8 l-12,0 l0,4 z" />
+  </g>
+  <g fill="#32ff6a" transform="rotate(60 100 100)">
+ 	 <use xlink:href="#base-arrow"/>
+  </g>
+  <g fill="#a8ff3e" transform="rotate(120 100 100)">
+ 	 <use xlink:href="#base-arrow"/>
+  </g>
+  <g fill="#de354a" transform="rotate(180 100 100)">
+ 	 <use xlink:href="#base-arrow" />
+  </g>
+  <g fill="#60a9f6" transform="rotate(240 100 100)">
+ 	 <use xlink:href="#base-arrow"/>
+  </g>
+  <g fill="#216583" transform="rotate(300 100 100)">
+ 	 <use xlink:href="#base-arrow" />
+  </g>
+</svg>

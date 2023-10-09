@@ -1,0 +1,82 @@
+
+
+/* <options> */
+
+.objform-icon-dots{
+    position: relative;
+    margin-left: 4px;
+    cursor: pointer;
+    padding-top: 2px;    
+    padding-bottom: 2px;
+}
+
+.objform-icon-dots[enabled="true"]{
+    visibility: visible;
+}
+
+.objform-icon-dots[enabled="false"]{
+    visibility: hidden;
+    display: none;
+}
+
+
+.objform-icon-dots > svg {
+   /* margin-top: 4px; */
+    margin-left: 2px;
+    stroke: none;
+    fill: rgb(37 42 44);
+    vertical-align: bottom;
+}
+
+.objform-icon-dots:hover >svg {
+    fill: #4be939;
+}
+
+.objform-option {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 8px;
+}
+
+
+.objform-option:hover {
+    background-color: #4be939;
+    border-radius: 4px;
+}
+
+
+.objform-option > * {
+    display: inline-block;
+}
+
+.objform-option-icon {
+    padding: 0 0 4px 0;
+    margin-right: 2px;
+    height: 16px;
+}
+
+.objform-option-icon > svg {
+    margin: 0;
+    stroke: none;
+    fill: white;
+}
+
+.objform-option-text {
+    height: 16px;
+    color: #ebebeb;
+    font: 12px arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-variant-caps: normal;
+    text-align: left;
+    white-space: nowrap;
+    padding-top: 3px;
+}
+
+/* <options> */

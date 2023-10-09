@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* <factored> */
+input, select, textarea {
+	font: inherit;
+	margin: 0;
+}
+/* </factored> */
+
+/* <buttons> */
+
+.text-input-wrapper {
+	display: inline-block;
+}
+
+.text-input {
+	position: relative;
+	
+	color: #24292e;
+	vertical-align: middle;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+	border: 1px solid #d1d5da;
+	
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+}
+
+
+/* <size> */
+.text-input-inlined {
+	/* min-height: 34px; */
+	padding: 2px 4px;
+	font-size: 12px;
+	line-height: 12px;
+	border-radius: 4px;
+}
+
+.text-input-small {
+	/* min-height: 34px; */
+	padding: 4px 6px;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 4px;
+}
+
+.text-input-normal {
+	/* min-height: 16px; */
+	padding: 6px 8px;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 4px;
+}
+
+/* </size> */
+
+/* <inputs> */
+
+.text-input:hover {
+	background-color: #edf3ff;
+}
+
+.text-input:focus {
+	border-color: #2188ff;
+	outline: none;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075), 0 0 0 0.2em
+		rgba(3, 102, 214, 0.3);
+}
+
+.text-input-light {
+	background-color: #fff;
+}
+
+.text-input-warning {
+	background-color: #fffbdd;
+}
+
+.text-input-error {
+	background-color: #ffdce0;
+}
+

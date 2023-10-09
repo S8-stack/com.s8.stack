@@ -1,0 +1,109 @@
+
+#screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images4.alphacoders.com/118/thumb-350-1188019.jpg);
+    background-size: cover;
+}
+
+
+.tiles-wrapper {
+    overflow-y: scroll;
+}
+
+.tiles-row > div {
+ display: inline-block;
+}
+
+.tile {
+    width: 128px;
+    height: 200px;
+    background-image: url(./project-pic.png);
+    background-size: cover;
+    margin: 16px;
+    filter: drop-shadow(0px 2px 8px #000000e7);
+}
+
+.validation-line {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+
+
+.menu-wrapper {
+    overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.menu-group {
+    margin-top: 12px;
+}
+
+.menu-group > div:nth-child(1) {
+	font-size: 11px;
+    color: rgb(148, 147, 147);
+	font-weight: 400;
+    padding: 4px 8px 4px 8px;
+}
+
+.menu-line {
+    padding: 4px 8px 4px 8px;
+}
+
+.menu-line:hover {
+    background-color: rgba(70, 121, 155, 0.5);
+}
+
+
+.menu-line-unselected {
+    cursor: pointer;
+    color: rgb(221, 219, 219);
+}
+
+.menu-line-selected {
+    cursor: default;
+    color: rgb(247, 249, 255);
+    background-color: rgb(106, 98, 175);
+}
+
+
+.menu-line-unselected > div > svg {
+    fill:rgb(116, 190, 255);
+}
+
+.menu-line-selected > div > svg {
+    fill: rgb(247, 249, 255);
+}
+
+.menu-line > div {
+    display: inline-block;
+    line-height: 16px;
+    vertical-align: top;
+}
+
+.menu-line > div > * {
+    vertical-align: top; 
+}
+
+
+.menu-line > div:nth-child(2) {
+    padding-top: 2px;
+}
+
+.menu-line > div > span {
+    
+	font-size: 13.2px;
+	font-weight: 300;
+    padding-left: 8px;
+	white-space: nowrap;
+}

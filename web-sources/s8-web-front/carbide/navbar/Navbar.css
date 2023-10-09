@@ -1,0 +1,67 @@
+
+
+.navbar-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+.navbar-menu {
+    border-bottom: 1px solid rgb(175, 175, 175);
+    color: rgb(65, 65, 65);
+    cursor: pointer;
+}
+
+
+.navbar-menu[selected="true"] {
+    border-bottom: 3px solid rgb(216, 1, 1);
+    color: black;
+    cursor: pointer;
+}
+
+
+.navbar-menu-label {
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+}
+
+.navbar-menu > .navbar-menu-label:hover {
+    background-color: rgb(231, 231, 255);
+    border-radius: 4px;
+    color: rgb(38, 33, 53);
+}
+
+
+
+.navbar-menu-icon {
+    padding-top: 0px;
+    width: 24px;
+    margin-right: 4px;
+}
+
+.navbar-menu-icon > svg {
+    fill : rgb(98, 98, 98);
+}
+
+.navbar-menu[selected = "true"] .navbar-menu-icon > svg {
+    fill : black;
+}
+
+.navbar-menu-name {
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+  	text-align: center;
+    padding-top: 2px;
+    padding-right: 4px;
+    white-space: nowrap;
+}

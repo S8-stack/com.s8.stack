@@ -1,0 +1,73 @@
+@import "../core.css";
+
+.he-bar-wrapper {
+	padding: 0px;
+	background-color: rgb(36, 41, 47);
+	font-size: 14px;
+}
+
+.he-bar {
+	padding-right: 32px !important;
+	padding-left: 32px !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: rgb(36, 41, 47);
+	font-size: 14px;
+	display: flex;
+}
+
+
+[class^="he-bar-menu"] {
+	display: inline-flex;
+	color: white;
+	padding: 8px 16px;
+	font-size: 14px;
+	line-height: 24px;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+	text-size-adjust: 100%;
+	overflow-wrap: break-word;
+}
+
+
+/* SOLUTION */
+/* The pseudo element has the same content and hover style, so it pre-sets the width of the element and visibility: hidden hides the pseudo element from actual view. */
+[class^="he-bar-menu"] > span::before {
+    display: block;
+    content: attr(data-content);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+[class^="he-nav-menu"] > span {
+	margin-right: 6px;
+	text-align: center;
+}
+
+.he-bar-menu-selected {
+	font-weight: 600;
+	cursor: auto;
+	border-bottom: solid 2px rgb(253, 140, 115);
+}
+
+.he-bar-menu-unselected {
+	font-weight: normal;
+	cursor: pointer;
+	border-bottom: none;
+    border-bottom: solid 2px transparent;
+}
+
+
+
+.he-bar-icon {
+	display: inline-flex;
+	padding: 0px 16px 0px 0px;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+	text-size-adjust: 100%;
+	overflow-wrap: break-word;
+}

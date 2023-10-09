@@ -1,0 +1,536 @@
+
+
+
+.objform-box {
+    color: #eee;
+    font: 12px arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-variant-caps: normal;
+    text-align: left;
+    width: 420px;
+
+    /* to de deleted */
+    margin-left: 8px;
+    margin-right: 8px;
+
+    max-height: 92vh;
+    overflow: scroll;
+}
+
+
+
+.objform-object-field {
+   clear: both;
+}
+
+.objform-object-body {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+    /*width: 100%; --> cancelled to enable auto-align right */
+    clear: both;
+}
+
+.objform-object-body-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64,64,64,0.64);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.objform-object-body-overlay > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: lime;
+    filter: drop-shadow(0px 0px 8px rgb(0, 255, 0, 0.8));
+}
+
+.objform-object-body-overlay[up-to-date="false"] {
+   visibility: visible;
+}
+
+.objform-object-body-overlay[up-to-date="true"] {
+    visibility: hidden;
+ }
+
+.objform-object-body-expanded {
+   visibility: visible;
+   display: block;
+}
+
+.objform-object-body-collapsed {
+    visibility: hidden;
+    display: none;
+ }
+
+/* define line */
+.objform-object-header, .objform-primitive-field, .objform-method, .objform-button {
+    border-bottom: 1px solid rgb(42 42 42 / 96%);
+}
+
+.objform-object-header > div, .objform-primitive-field > div, .objform-method > div{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.objform-object-header {
+    cursor: pointer;
+    background-color: rgb(16, 16, 16);
+    color: white;
+}
+
+.objform-object-header:hover {
+    cursor: pointer;
+    background-color: rgb(17, 0, 64);
+    color: white;
+}
+
+.objform-primitive-field {
+    background-color: rgb(34, 34, 34);
+    cursor: default;
+    color: #eee;
+}
+
+.objform-method {
+    background-color: rgb(34, 34, 34);
+}
+
+.objform-method-disabled {
+    color:rgb(128, 128, 128);
+    cursor: default;
+}
+
+.objform-method-enabled {
+    color: #eee;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.objform-method-enabled > div:first-child {
+    text-indent: 0px;
+    transition: text-indent 0.2s ease;
+}
+
+.objform-method-enabled:hover  {
+    background: #509449 !important;
+    transition: background 0.2s ease;
+}
+
+.objform-method-enabled:hover > div:first-child {
+    text-indent: 10px;
+    transition: text-indent 0.2s ease;
+}
+
+
+.objform-icon-triangle-expanded, .objform-icon-triangle-collapsed {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0px;
+}
+
+.objform-icon-triangle-expanded > svg, .objform-icon-triangle-collapsed > svg {
+    margin: 0px;
+    stroke: none;
+    fill: white;
+}
+
+.objform-icon-triangle-expanded > svg {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+}
+
+.objform-icon-triangle-collapsed > svg {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.objform-icon-arrow-enabled > svg {
+    margin-top: 7px;
+    margin-left: 2px;
+    stroke: none;
+    fill: white;
+}
+
+.objform-icon-arrow-disabled > svg {
+    margin-top: 7px;
+    margin-left: 2px;
+    stroke: none;
+    fill: rgb(128, 128, 128);
+}
+
+/* <options> */
+
+.objform-icon-dots{
+    position: relative;
+    margin-left: 4px;
+    cursor: pointer;
+    padding-top: 2px;    
+    padding-bottom: 2px;
+}
+
+.objform-icon-dots[enabled="true"]{
+    visibility: visible;
+}
+
+.objform-icon-dots[enabled="false"]{
+    visibility: hidden;
+    display: none;
+}
+
+
+.objform-icon-dots > svg {
+   /* margin-top: 4px; */
+    margin-left: 2px;
+    stroke: none;
+    fill: rgb(37 42 44);
+    vertical-align: bottom;
+}
+
+.objform-icon-dots:hover >svg {
+    fill: #4be939;
+}
+
+.objform-option-text
+
+/* <options> */
+
+
+.objform-icon-size-16 {
+    margin: 0 0 2px 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 16px;
+}
+
+.objform-icon-size-16 > svg {
+    margin: 0;
+    stroke: none;
+}
+
+.objform-object-header-type {
+    border-radius: 2px 2px 2px 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: 320;
+    color: rgb(216, 199, 255);
+}
+
+
+[class*="objform-markup"] {
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+
+div[class*="objform-icon-color-"]> svg {
+   stroke: none;
+}
+
+.objform-markup {
+    height: 20px;
+}
+
+.objform-markup-white {
+    border-left-color: rgb(255, 255, 255);
+}
+
+.objform-icon-color-white > svg {
+    fill: rgb(255, 255, 255);
+}
+
+.objform-markup-grey {
+    border-left-color: rgb(122, 122, 122);
+}
+
+.objform-icon-color-grey > svg {
+    fill: rgb(122, 122, 122);
+}
+
+.objform-markup-green {
+    border-left-color: rgb(0, 189, 0);
+}
+
+.objform-icon-color-green > svg {
+    fill: rgb(0, 189, 0);
+}
+
+.objform-markup-purple {
+    border-left-color: rgb(192, 51, 180);
+}
+
+.objform-icon-color-purple > svg{
+    fill : rgb(192, 51, 180);
+}
+
+.objform-markup-yellow {
+    border-left-color: rgb(250, 232, 68);
+}
+
+.objform-icon-color-yellow > svg{
+    fill: rgb(250, 232, 68);
+}
+
+.objform-markup-blue {
+    border-left-color: rgb(101, 68, 250);
+}
+
+.objform-icon-color-blue > svg {
+    fill : rgb(101, 68, 250);
+}
+
+/* for <object-header> or <primtive-field> */
+/*
+.objform-field-name-object, .objform-field-name-primitive {
+   width: 42%; 
+}
+*/
+
+.objform-field-name-object > span, .objform-field-name-primitive > span, .objform-output > span {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 4px;
+    text-align: left;
+}
+
+.objform-field-name-object {
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 8px;
+}
+
+.objform-field-name-object:hover {
+    color: #4be939;
+}
+
+.objform-input {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    width: 36%;
+}
+
+.objform-field-name-primitive {
+    /* padding-top: 3px; */
+    font-size: 12px;
+    padding-bottom: 3px;
+}
+
+.objform-input > input, .objform-input > select {
+    width: 100%;
+    background: #303030;
+    font-size: 12px;
+    color: aqua;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 0;
+}
+
+.objform-input > input[type="text"] {
+    border: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.objform-input > input[type="checkbox"] {
+    border: none;
+    padding-left: 2px;
+    padding-right: 2px;
+    vertical-align: middle;
+}
+
+.objform-input > select {
+    border: none;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 18px;
+}
+
+
+.objform-output {
+    background: none;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.objform-output > span {
+    font-size: 12px;
+    font-weight: bold;
+    color: aqua;
+}
+
+.objform-unit {
+    margin-left: 4px;
+    padding-bottom: 3px;
+}
+
+.objform-unit > span {
+    padding: 0px;
+    border: none;
+    font-size: 12px;
+    color: rgb(97, 206, 233);
+}
+
+
+/* <status> */
+
+
+.objform-status {
+    margin: 0 0 2px 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 16px;
+}
+
+.objform-status > svg {
+    margin: 0;
+    stroke: none;
+}
+
+.objform-status[status="disabled"] {
+    visibility: hidden;
+}
+
+.objform-status[status="out-of-sync"] > svg {
+    fill: rgb(155, 155, 155);
+}
+
+.objform-status[status="ok"] > svg {
+    fill: rgb(22, 192, 19);
+}
+
+.objform-status[status="warning"] > svg {
+    fill: rgb(230, 255, 2);
+}
+
+.objform-status[status="error"] > svg {
+    fill: rgb(255, 47, 36);
+}
+
+/* </status> */
+
+
+/* tooltip inserted inline */
+.objform-info {
+    position: relative;
+    font: 12px arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-variant-caps: normal;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 3px;
+    background-color: #53697c;
+    color: #222222;
+    border-radius: 2px;
+    margin-left: 4px;
+    padding: 0 3px 0 3px;
+}
+
+.objform-info > div[class*="popover"]{
+    visibility: hidden;
+}
+
+.objform-info:hover > div[class*="popover"]{
+    visibility: visible;
+}
+
+.objform-info[enabled = "true"]{
+    visibility: visible;
+}
+
+.objform-info[enabled = "false"]{
+    visibility: hidden;
+    display: none;
+}
+
+
+.objform-doc-text {
+    margin: 0 8px 0 8px;
+    font: 12px arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-size: 12px;
+    color: #222222;
+    max-width: 320px;
+    min-width: 200px;
+    max-height: 60px;
+    overflow-y: scroll;
+}
+
+/* <icons> */
+.objform-expand-icon{
+    fill: #eee;
+    stroke: none;
+}
+/* <icons> */
+
+
+/* <test-section> */
+
+
+#objform-test-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.objform-test-box {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 320px;
+}
+
+
+/* </test-section> */
+
+
+.objform-button {
+    background-color: rgb(0 66 0);
+    color: #cbcbcb;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 24px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.objform-button:hover {
+    background-color: rgb(0, 142, 0);
+    color: #f8f8f8;
+}
+
+.objform-button:active {
+    background-color: rgb(2, 212, 2);
+}
+
+.objform-button > span {
+    font: 12px arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-size: 12px;   
+}

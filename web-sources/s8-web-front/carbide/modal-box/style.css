@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+
+@keyframes background-loose-focus {
+	from {backdrop-filter: blur(0px);
+}
+
+to {
+	backdrop-filter: blur(8px);
+}
+}
+
+[class^="popover"] {
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* The Modal (background) */
+#modal-background-overlay {
+	position: absolute; /* Stay in place */
+	z-index: 63; /* Sit on top */
+	left: 0px;
+	top: 0px;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	
+	/* experimental... */
+	/*background-color: #222222*/;
+	/*opacity: 0.4;*/
+	
+	animation-name: background-loose-focus;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+/* <box-factored> */
+.box-std, .box-big, .modal-box {
+	position: absolute;
+	/* primer-GitHub-primer imported */
+	background-color: #ffffff;
+	border: 1px solid #d1d5da;
+	border-radius: 4px;
+	box-shadow: 0px 2px 32px rgba(0, 0, 0, 0.6);
+}
+
+.box-std, .box-big {
+	overflow: hidden;
+}
+
+.modal-box {
+	z-index: 64; /* Sit on top of overlay(z-index=254) */
+	/* center */
+	left: 50%;
+    transform: translateX(-50%);
+	margin-top: 64px;
+}
+
+.modal-box-close {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: -12px;
+	top: -12px;
+	filter: drop-shadow(0px 0px 2px #22222288);
+	cursor: pointer;
+}
+
+
+.right-aligned {
+	float: right;
+}
+
+/* <spaced-row-8> */
+.spaced-row-8 {
+	padding: 8px;
+}
+
+.spaced-row-8>div{
+	padding-right: 6px;
+	display: inline-block;
+}
+
+.spaced-row-8>div:first-child{
+	padding-right: 0px;
+}
+/* </spaced-row-8> */
+
+/* <spaced-row-8-right> */
+.spaced-row-8-right {
+	padding: 8px;
+	text-align: right;
+}
+
+.spaced-row-8-right>div{
+	padding-right: 6px;
+	display: inline-block;
+}
+
+.spaced-row-8-right>div:last-child{
+	padding-right: 0px;
+}
+/* </spaced-row-8-right> */
+
+.modal-box-close:hover {
+	fill: yellow;
+}
+
+.box-std {
+	margin: -1px -1px 0;
+}
+
+.box-big {
+	width: calc(100% - 64px);
+	height: calc(100% - 32px);
+	margin: 16px 32px 16px 32px;
+}
+
+.box-head {
+	background-color: #f4f4f4;
+	padding: 8px 6px 8px 16px;
+	margin: 0px;
+}
+
+.box-main {
+	margin-bottom: 0px;
+	overflow: scroll;
+}
+
+.breadcrumb {
+	max-width: 635px;
+	font-size: 18px;
+	line-height: 26px;
+	color: #0366d6;
+}
+
+.breadcrumb-node {
+}
+
+.breadcrumb-separator {
+	padding-left: 2px;
+	padding-right: 2px; 
+}
+
+.breadcrumb-leaf {
+	font-weight: bold;
+}
+
+.breadcrumb-node, .breadcrumb-leaf {
+	padding: 2px 2px 2px 2px;
+	cursor: pointer;
+}
+
+
+.breadcrumb-node:hover, .breadcrumb-leaf:hover {
+	background-color: #0366d61f;
+	border-radius: 4px;
+}
+
+/* The Modal (background) */
+.box-nav {
+	position: relative;
+	background-color: #f4f4f4;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #e1e4e8;
+	padding-top: 1px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.box-nav:after, .box-nav:before {
+	display: table;
+	content: "";
+}
+
+.nav-tab, .nav-tab-selected {
+	display: inline-block;
+	position: relative;
+	bottom: -1px;
+	vertical-align: bottom;
+	color: #586069;
+	white-space: nowrap;
+	border: 1px solid transparent;
+	font-size: 14px;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+.nav-tab {
+	border-radius: 8px;
+	margin: 3px 6px 4px 6px;
+	padding: 4px 6px 4px 6px;
+}
+
+.nav-tab-icon, .nav-tab-text {
+	vertical-align: bottom;
+}
+
+.nav-tab-icon {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-right: 0px;
+}
+
+.nav-tab-icon>svg {
+	fill: currentColor;
+	color: rgba(27, 31, 35, .3);
+}
+
+.nav-tab-text {
+	margin-top: auto;
+	margin-bottom: auto;
+	white-space: nowrap;
+}
+
+.nav-tab-selected {
+	border-radius: 3px 3px 0 0;
+	padding: 7px 12px 8px 12px;
+	color: #24292e;
+	background-color: #fff;
+	border-top: 3px solid transparent;
+	border-color: #e36209 #e1e4e8 transparent;
+	cursor: default;
+}
+
+.nav-tab-selected>.nav-tab-icon>svg {
+	color: #982117;
+}
+
+.nav-tab:hover {
+	background-color: #e8e5e3fa;
+}
+
+.nav-tab:hover>.nav-tab-icon>svg {
+	color: #1b4d1a;
+}
+
+.nav-tab:hover>.nav-tab-text {
+	color: #393939;
+}
+
+.list{
+	width: 100%;
+	margin-top: 84px;
+	margin-bottom: 0px;
+}
+
+/* </box-factored> */
+
+/* Modal Content */
+.medium {
+	/* position */
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 64px;
+}
+
+.box>div.container {
+	border-top: 1px solid #d1d5da;
+	display: block;
+	padding: 16px;
+}
+
+.box>div.container:first-child {
+	border-top: none;
+}
+
+.line-block {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.struct-row {
+	font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.struct-row>span{
+	vertical-align: bottom;
+	margin-right: 4px;
+}
+
+.struct-row>span:last-child{
+	margin-right: 0px;
+}
+
+
+.line-32 > span, .line-32 > button, .line-32 > input {
+	vertical-align: bottom;
+	margin-right: 8px;
+}
+
+/* <icon-containers> */
+.icon-container {
+	padding: 8px;
+}
+
+/* </icon-containers> */
+
+
+
+
+/* <width> */
+.width-256 {
+	width: 256px;
+}
+
+.width-320 {
+	width: 320px;
+}
+
+.width-512 {
+	width: 512px;
+}
+
+/* </width> */
+
+
+
+
+/* <paddings> */
+
+/* Balanced padding */
+.padding-balanced {
+	padding: 8px;
+}
+
+.padding-4 {
+	padding: 4px;
+}
+
+.padding-up4 {
+	padding: 4px 4px 0px 4px;
+}
+
+.padding-down4 {
+	padding: 0px 4px 4px 4px;
+}
+
+.padding-8 {
+	padding: 8px;
+}
+
+.padding-up8 {
+	padding: 8px 8px 0px 8px;
+}
+
+.padding-down8 {
+	padding: 0px 8px 8px 8px;
+}
+
+.padding-16 {
+	padding: 16px;
+}
+
+.padding-up16 {
+	padding: 16px 16px 0px 16px;
+}
+
+.padding-down16 {
+	padding: 0px 16px 16px 16px;
+}
+
+/* </paddings> */
+
+
+
+/* <max-width> */
+
+/* Balanced padding */
+.width-128 {
+	max-width: 128px;
+}
+
+.width-256 {
+	max-width: 256px;
+}
+
+.width-512 {
+	max-width: 512;
+}
+
+/* </max-width> */

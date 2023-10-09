@@ -1,0 +1,59 @@
+@import "../core.css";
+.he-nav {
+	padding-right: 32px !important;
+	padding-left: 32px !important;
+	font-size: 14px;
+	background-color: #f6f8fa;
+	box-shadow: inset 0 -1px 0 rgb(216, 222, 228);
+}
+
+.he-nav>ul {
+	display: flex !important;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+[class^="he-nav-menu"] {
+	display: inline-flex !important;
+	list-style: none !important;
+	list-style-position: outside;
+	padding: 8px 16px;
+	font-size: 14px;
+	line-height: 30px;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+	text-size-adjust: 100%;
+	overflow-wrap: break-word;
+}
+
+
+/* SOLUTION */
+/* The pseudo element has the same content and hover style, so it pre-sets the width of the element and visibility: hidden hides the pseudo element from actual view. */
+[class^="he-nav-menu"] > span::before {
+    display: block;
+    content: attr(data-content);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+[class^="he-nav-menu"] > span {
+	margin-right: 6px;
+	text-align: center;
+}
+
+.he-nav-menu-selected {
+	font-weight: 600;
+	cursor: auto;
+	border-bottom: solid 2px rgb(253, 140, 115);
+}
+
+.he-nav-menu-unselected {
+	font-weight: normal;
+	cursor: pointer;
+	border-bottom: none;
+    border-bottom: solid 2px transparent;
+}

@@ -1,0 +1,59 @@
+
+
+.segment {
+  stroke: black;
+  stroke-width: 0.8
+}
+
+.circle {
+  stroke: red;
+  stroke-width: 0.4;
+  fill: none;
+}
+
+.spot {
+  stroke: red;
+  stroke-width: 3;
+  fill: none;
+}
+
+.spot2 {
+  fill: grey;
+}
+
+.point {
+  stroke: red;
+  stroke-width: 0.2;
+  fill: blue;
+}
+
+/*
+*	Dashed
+*/
+
+.dashed {
+  fill: none;
+  stroke: red;
+  stroke-width: 0.2;
+  stroke-dasharray: 3,2;
+}
+
+.dashed2 {
+  fill: none;
+  stroke: red;
+  stroke-width: 1;
+  stroke-dasharray: 3,2;
+}
+
+.structure {
+  stroke: grey;
+  stroke-width: 1;
+   fill: none;
+}
+
+
+.blackbody {
+  stroke: black;
+  stroke-width: 1.6
+}
+

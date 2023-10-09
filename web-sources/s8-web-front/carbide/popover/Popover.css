@@ -1,0 +1,434 @@
+.demo-container {
+    margin: 10px auto;
+    width: 600px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+
+.popover-menu-items {
+
+    /* flex grid level 1 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* <popover> */
+
+
+.popover{
+    cursor: default;   
+}
+
+/* <popover-visibility> */
+
+.popover-visible {
+    visibility: visible;
+}
+
+.popover-hidden {
+    visibility: hidden;
+}
+
+/* </popover-visibility> */
+
+
+/* <themes> */
+:root {
+    --inside-color : rgb(78, 78, 78);
+    --border-color : rgb(127, 127, 127);
+    --shadow-color : rgba(174, 255, 12, 0.225);
+}
+
+.popover-dark {
+    --inside-color : rgb(78, 78, 78);
+    --border-color : rgb(127, 127, 127);
+    --shadow-color : rgba(174, 255, 12, 0.225);
+}
+
+.popover-light {
+    --inside-color : white;
+    --border-color : rgb(178, 178, 178);
+    --shadow-color: rgb(64, 64, 64, 0.36);
+}
+
+.popover-primary {
+    --inside-color : white;
+    --border-color : rgb(28, 239, 20);
+    --shadow-color: rgb(64, 64, 64, 0.36);
+}
+
+.popover-warning {
+    --inside-color : rgb(251, 255, 217);
+    --border-color : rgb(218, 254, 53);
+    --shadow-color: rgb(64, 64, 64, 0.36);
+}
+
+.popover-danger {
+    --inside-color : rgb(255, 215, 215);
+    --border-color : rgb(253, 67, 67);
+    --shadow-color: rgb(64, 64, 64, 0.36);
+}
+
+/* </themes> */
+
+
+/* */
+.popover-left-top,
+.popover-left,
+.popover-left-bottom,
+.popover-top-left,
+.popover-top,
+.popover-top-right,
+.popover-right-top,
+.popover-right,
+.popover-right-bottom,
+.popover-bottom-left,
+.popover-bottom,
+.popover-bottom-right {
+    padding: 8px 0px 8px 0px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: var(--inside-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    filter: drop-shadow(0 2px 4px var(--shadow-color));
+    color: white;
+   /* transition: all 0.3s ease-in; */
+
+	z-index: 64;
+}
+
+
+.popover-left-top::before, .popover-left-top::after,
+.popover-left::before, .popover-left::after,
+.popover-left-bottom::before, .popover-left-bottom::after,
+.popover-top-left::before, .popover-top-left::after,
+.popover-top::before, .popover-top::after,
+.popover-top-right::before, .popover-top-right::after,
+.popover-right-top::before, .popover-right-top::after,
+.popover-right::before, .popover-right::after,
+.popover-right-bottom::before, .popover-right-bottom::after,
+.popover-bottom-left::before, .popover-bottom-left::after,
+.popover-bottom::before, .popover-bottom::after,
+.popover-bottom-right::before, .popover-bottom-right::after {
+    content: "";
+    position: absolute;
+    /*transition: all 0.3s ease-in;*/
+}
+
+
+
+/* <top> */
+
+
+.popover-top-left {
+    top: 100%;
+    left: 0px;
+    transform: translate(-22px, 8px);
+}
+
+.popover-top {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 8px);
+}
+
+.popover-top-right {
+    top: 100%;
+    left: 100%;
+    transform: translate(9px - 100%, 8px);
+}
+
+
+
+.popover-top-left::before, .popover-top::before, .popover-top-right::before {
+    top: -19px;
+    border-top: 9.5px solid transparent;
+    border-bottom: 9.5px solid var(--border-color);
+    border-right: 9.5px solid transparent;
+    border-left: 9.5px solid transparent;
+}
+
+.popover-top-left::before {
+    left: 12.5px;
+}
+
+.popover-top::before {
+    left: calc(50% - 9.5px);
+}
+
+.popover-top-right::before {
+    right: 12.5px;
+}
+
+.popover-top-left::after, .popover-top::after, .popover-top-right::after {
+    top: -16px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid var(--inside-color);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.popover-top-left::after {
+    left: 14px;
+}
+
+.popover-top::after {
+    left: calc(50% - 8px);
+}
+
+.popover-top-right::after {
+    right: 14px;
+}
+
+/* </top> */
+
+
+/* <right> */
+
+
+.popover-right-top {
+    top: 20px;
+    right: 100%;
+    transform : translate(-9px, -28px);
+}
+
+.popover-right {
+    top: 50%;
+    right: 100%;
+    transform : translate(-9px, -50%);
+}
+
+.popover-right-bottom {
+    top: calc(100% - 20px);
+    right: 100%;
+    transform : translate(-9px, 9px - 100%);
+}
+
+
+.popover-right-top::before, .popover-right::before, .popover-right-bottom::before {
+    right: -19px;
+    border-top: 9.5px solid transparent;
+    border-bottom: 9.5px solid transparent;
+    border-right: 9.5px solid transparent;
+    border-left: 9.5px solid var(--border-color);
+}
+
+.popover-right-top::before {
+    top: 12.5px;
+}
+
+.popover-right::before {
+    top: calc(50% - 9.5px);
+}
+
+.popover-right-bottom::before {
+    bottom: 12.5px;
+}
+
+.popover-right-top::after, .popover-right::after, .popover-right-bottom::after {
+    right: -16px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid var(--inside-color);
+}
+
+.popover-right-top::after {
+    top: 14px;
+}
+
+.popover-right::after {
+    top: calc(50% - 8px);
+}
+
+.popover-right-bottom::after {
+    bottom: 14px;
+}
+
+/* </right> */
+
+/* <bottom> */
+
+
+.popover-bottom-left {
+    bottom: 100%;
+    left: 20px;
+    transform : translate(-28px, -18px);
+}
+
+.popover-bottom {
+    bottom: 100%;
+    left: 50%;
+    transform : translate(-50%, -18px);
+}
+
+.popover-bottom-right {
+    bottom: 100%;
+    left: 100%;
+    transform : translate(9px - 100%, -18px);
+} 
+
+
+.popover-bottom-left::before, .popover-bottom::before, .popover-bottom-right::before {
+    bottom: -19px;
+    border-top: 9.5px solid var(--border-color);
+    border-bottom: 9.5px solid transparent;
+    border-right: 9.5px solid transparent;
+    border-left: 9.5px solid transparent;
+}
+
+.popover-bottom-left::before {
+    left: 12.5px;
+}
+
+.popover-bottom::before {
+    left: calc(50% - 9.5px);
+}
+
+.popover-bottom-right::before {
+    right: 12.5px;
+}
+
+.popover-bottom-left::after, .popover-bottom::after, .popover-bottom-right::after {
+    bottom: -16px;
+    border-top: 8px solid var(--inside-color);
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.popover-bottom-left::after {
+    left: 14px;
+}
+
+.popover-bottom::after {
+    left: calc(50% - 8px);
+}
+
+.popover-bottom-right::after {
+    right: 14px;
+}
+/* </bottom> */
+
+
+/* <left> */
+
+/* relative to target size */
+.popover-left-top, .popover-left, .popover-left-bottom {
+   left: 100%;
+   top: 50%;
+}
+
+.popover-left-top { /* relative to popover size */
+    transform: translate(12px, -23px);
+}
+
+.popover-left {
+    transform: translate(12px, -50%);
+}
+
+.popover-left-bottom {
+    transform: translate(12px, calc(9px - 100%));
+}
+
+
+.popover-left-top::before, .popover-left::before, .popover-left-bottom::before {
+    left: -19px;
+    border-top: 9.5px solid transparent;
+    border-bottom: 9.5px solid transparent;
+    border-right: 9.5px solid var(--border-color);
+    border-left: 9.5px solid transparent;
+}
+
+.popover-left-top::before {
+    top: 12.5px;
+}
+
+.popover-left::before {
+    top: calc(50% - 9.5px);
+}
+
+.popover-left-bottom::before {
+    bottom: 12.5px;
+}
+
+.popover-left-top::after, .popover-left::after, .popover-left-bottom::after {
+    left: -16px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--inside-color);
+    border-left: 8px solid transparent;
+}
+
+.popover-left-top::after {
+    top: 14px;
+}
+
+.popover-left::after {
+    top: calc(50% - 8px);
+}
+
+.popover-left-bottom::after {
+    bottom: 14px;
+}
+
+/* </left> */
+
+
+
+/* <menu-item> */
+
+.popover-item {
+    padding: 0px 12px 0px 12px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    color: rgb(229, 229, 229);
+    font: 12px arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.popover-item:hover {
+    color: white;
+    background-color: blue;
+}
+
+.popover-item-icon, .popover-item-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.popover-item-icon {
+    fill: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 20px;
+    margin-right: 6px;
+    width: 16px;
+}
+
+.popover-item-label {
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* </menu-item> */
+
+/* </popover> */
+
+

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* <factored> */
+
+
+
+.he-icon-svg {
+	vertical-align: text-bottom;
+}
+
+.icon-hidden {
+	visibility: hidden;
+}
+
+.icon-alert {
+	fill: yellow;
+	stroke: black;
+	stroke-width: 1px;
+}
+
+.icon-flat-blue {
+	fill: blue;
+}
+
+.he-icon-style-grey {
+	fill: grey;
+}
+
+.he-icon-style-black {
+	fill: black;
+}
+
+.he-icon-style-red {
+	fill: #ff000088;
+}
+
+.he-icon-style-yellow {
+	fill: #ffff0088;
+}
+
+.he-icon-style-green {
+	fill: #00ff0088;
+}
+
+.he-icon-style-white {
+	fill: #00ff0088;
+}
